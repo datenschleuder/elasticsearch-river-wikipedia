@@ -79,7 +79,7 @@ public class WikipediaRiver extends AbstractRiverComponent implements River {
         super(riverName, settings);
         this.client = client;
 
-        String url = "http://download.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2";
+        String url = "http://download.wikimedia.org/dewiki/latest/dewiki-latest-pages-articles.xml.bz2";
         if (settings.settings().containsKey("wikipedia")) {
             Map<String, Object> wikipediaSettings = (Map<String, Object>) settings.settings().get("wikipedia");
             url = XContentMapValues.nodeStringValue(wikipediaSettings.get("url"), url);
